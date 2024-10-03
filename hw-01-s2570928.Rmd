@@ -47,14 +47,20 @@ variables with missing observations: price, neighbourhood and review scores rati
 ## EXERCISE 2
 
 ```{r hw1-ex2}
+OT_prop <- select (edibnb, neighbourhood, price)
+OT_prop2 <- filter(OT_prop,price>=100)
+  count(OT_prop2,neighbourhood="Old Town",sort=TRUE)
 
 ```
 
+```{r hw1-ex2.1}
+Sside_prop <-filter(edibnb,neighbourhood=="Southside" & accommodates >= 4)
+Sside_prop2 <-summarise(Sside_prop, mean=mean(price,na.rm=TRUE), max=max(price,na.rm=TRUE),min=min(price,na.rm=TRUE))
+arrange(Sside_prop2, desc(max))
+```
 
-_Remove this text, and add your answer for Exercise 2 here._
 
 
-------------------------------------------------------------------------------
 
 ## EXERCISE 3
 
