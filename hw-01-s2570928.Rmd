@@ -30,18 +30,24 @@ council <- read_csv("data/council_assessments.csv")
 ## EXERCISE 1
 
 ```{r hw1-ex1}
- is.na(select(edibnb, id:listing_url))
+ var_w_na<-(select(edibnb, id:listing_url))
+arrange(edibnb, !is.na(var_w_na))
 ```
 
 
-_Remove this text, and add your answer for Exercise 1 here._
+```{r hw1-ex1.1}
+best<- select(edibnb, id,review_scores_rating, number_of_reviews)
+  best2<- filter(best, review_scores_rating>=100)
+  arrange(best2,desc(number_of_reviews))
+```
 
+variables with missing observations: price, neighbourhood and review scores rating.And the ID of the listing that has the highest number of reviews with a perfect review score of 100% is:860170
 ------------------------------------------------------------------------------
 
 ## EXERCISE 2
 
 ```{r hw1-ex2}
-# remove this comment and add the code for Exercise 2 here
+
 
 ```
 
