@@ -48,7 +48,6 @@ variables with missing observations: price, neighbourhood and review scores rati
 
 ```{r hw1-ex2}
 
-
 ```
 
 
