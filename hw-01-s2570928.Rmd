@@ -65,7 +65,10 @@ arrange(Sside_prop2, desc(max))
 ## EXERCISE 3
 
 ```{r hw1-ex3}
-# remove this comment and add the code for Exercise 3 here
+
+
+  
+  
 
 ```
 
